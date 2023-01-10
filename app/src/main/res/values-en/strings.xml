@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">B3TempoApp2022</string>
+    <string name="dcv_tomorrow_tx">Tomorrow</string>
+    <string name="dcv_today_tx">Today</string>
+    <string name="not_available">NA</string>
+    <string name="not_set">not set</string>
+    <string name="history_bt">History</string>
+    <string name="history_activity_title">History Tempo</string>
+    <string name="channel_name">Alerts Tempo</string>
+    <string name="channel_description">Alert Tempo for white and red days</string>
+    <string name="tempo_notif_title">Alert Tempo</string>
+    <string name="tempo_notif_text">Tomorrow day %s</string>
+    <string name="tempo_red_color_text">Red</string>
+    <string name="tempo_white_color_text">White</string>
+    <string name="tempo_blue_color_text">Blue</string>
+    <string name="tempo_undecided_color_text">Undecided</string>
+</resources>

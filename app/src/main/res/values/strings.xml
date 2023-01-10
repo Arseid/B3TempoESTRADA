@@ -13,9 +13,9 @@
     <string name="tempo_notif_title">Alerte Tempo</string>
     <string name="tempo_notif_text">"Demain jour %s"</string>
 
-    <string name="tempo_red_color_text">rouge</string>
-    <string name="tempo_white_color_text">blanc</string>
-    <string name="tempo_blue_color_text">bleu</string>
-    <string name="tempo_undecided_color_text">indéterminé</string>
+    <string name="tempo_red_color_text">Rouge</string>
+    <string name="tempo_white_color_text">Blanc</string>
+    <string name="tempo_blue_color_text">Bleu</string>
+    <string name="tempo_undecided_color_text">Indéterminé</string>
 
 </resources>

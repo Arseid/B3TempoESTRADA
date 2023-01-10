@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -113,6 +114,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     binding.todayDcv.setDayCircleColor(tempoDaysColor.getCouleurJourJ());
                     binding.tomorrowDcv.setDayCircleColor(tempoDaysColor.getCouleurJourJ1());
                     //checkColor4Notif(tempoDaysColor.getCouleurJourJ1());
+
+                    // Evolution 1
+                    Resources resources = getResources();
+                    if (tempoDaysColor.getCouleurJourJ().toString()=="BLUE")
+                        binding.colorTodayDcv.setText(resources.getString(R.string.tempo_blue_color_text));
+                    else if (tempoDaysColor.getCouleurJourJ().toString()=="RED")
+                        binding.colorTodayDcv.setText(resources.getString(R.string.tempo_red_color_text));
+                    else if (tempoDaysColor.getCouleurJourJ().toString()=="WHITE")
+                        binding.colorTodayDcv.setText(resources.getString(R.string.tempo_white_color_text));
+
+                    if (tempoDaysColor.getCouleurJourJ1().toString()=="BLUE")
+                        binding.colorTomorrowDcv.setText(resources.getString(R.string.tempo_blue_color_text));
+                    else if (tempoDaysColor.getCouleurJourJ1().toString()=="RED")
+                        binding.colorTomorrowDcv.setText(resources.getString(R.string.tempo_red_color_text));
+                    else if (tempoDaysColor.getCouleurJourJ1().toString()=="WHITE")
+                        binding.colorTomorrowDcv.setText(resources.getString(R.string.tempo_white_color_text));
+
                 } else {
                     Log.w(LOG_TAG, "call to getTempoDaysColor() failed with error code " + response.code());
                 }

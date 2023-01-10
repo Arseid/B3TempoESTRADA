@@ -23,6 +23,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/color_today_dcv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tempo_undecided_color_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tempo_color_text_size"
+        android:layout_marginBottom="75dp"
+        app:layout_constraintBottom_toTopOf="@+id/tomorrow_dcv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
     <edu.ynov.b3tempoestrada.DayColorView
         android:id="@+id/tomorrow_dcv"
         android:layout_width="0dp"
@@ -39,6 +52,19 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/today_dcv" />
+
+    <TextView
+        android:id="@+id/color_tomorrow_dcv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tempo_undecided_color_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tempo_color_text_size"
+        android:layout_marginBottom="75dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
