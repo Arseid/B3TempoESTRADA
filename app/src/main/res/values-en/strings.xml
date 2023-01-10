@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">B3TempoApp2022</string>
+    <string name="app_name">B3TempoEstrada</string>
     <string name="dcv_tomorrow_tx">Tomorrow</string>
     <string name="dcv_today_tx">Today</string>
     <string name="not_available">NA</string>
