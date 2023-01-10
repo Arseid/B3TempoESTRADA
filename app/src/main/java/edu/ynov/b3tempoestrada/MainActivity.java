@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(binding.getRoot());
 
         // init views
-        binding.historyBt.setOnClickListener(this);
+        binding.historyBt1.setOnClickListener(this);
+        binding.historyBt2.setOnClickListener(this);
 
         // Create notification channel
         createNotificationChannel();
@@ -209,8 +210,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent();
-        intent.setClass(this,HistoryActivity.class);
-        startActivity(intent);
+        if (v.getId()==R.id.history_bt1){
+            Intent intent = new Intent();
+            intent.setClass(this,HistoryActivity.class);
+            startActivity(intent);
+        }
+        else if (v.getId()==R.id.history_bt2){
+            Intent intent = new Intent();
+            intent.setClass(this,HistoryActivityV2.class);
+            startActivity(intent);
+        }
     }
 }
