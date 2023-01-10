@@ -14,7 +14,6 @@ import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.ynov.b3tempoestrada.databinding.ActivityHistoryBinding;
 import edu.ynov.b3tempoestrada.databinding.ActivityHistoryV2Binding;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -30,7 +29,7 @@ public class HistoryActivityV2 extends AppCompatActivity {
     List<TempoDate> tempoDates = new ArrayList<>();
 
     // RV adapter
-    TempoDateAdapter tempoDateAdapter;
+    TempoDateAdapterV2 tempoDateAdapterV2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +41,8 @@ public class HistoryActivityV2 extends AppCompatActivity {
         // Init recycler view
         binding.tempoHistoryRv2.setHasFixedSize(true);
         binding.tempoHistoryRv2.setLayoutManager(new LinearLayoutManager(this));
-        tempoDateAdapter = new TempoDateAdapter(tempoDates, this);
-        binding.tempoHistoryRv2.setAdapter(tempoDateAdapter);
+        tempoDateAdapterV2 = new TempoDateAdapterV2(tempoDates, this);
+        binding.tempoHistoryRv2.setAdapter(tempoDateAdapterV2);
 
         if (edfApi != null) {
             updateTempoHistory();
@@ -78,7 +77,7 @@ public class HistoryActivityV2 extends AppCompatActivity {
                 } else {
                     Log.e(LOG_TAG,"Call to getTempoHistoy() returned error code " + response.code());
                 }
-                tempoDateAdapter.notifyDataSetChanged();
+                tempoDateAdapterV2.notifyDataSetChanged();
                 binding.tempoHistoryPb2.setVisibility(View.GONE);
             }
 
